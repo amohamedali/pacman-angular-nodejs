@@ -2,32 +2,16 @@
 
 /**
  * @ngdoc overview
- * @name clientApp
+ * @name pacmanApp
  * @description
- * # clientApp
+ * # pacmanApp
  *
  * Main module of the application.
  */
 angular
-  .module('clientApp', [
-    'ngAnimate',
-    'ngCookies',
-    'ngResource',
-    'ngRoute',
-    'ngSanitize',
-    'ngTouch'
+  .module('pacmanApp', [
+    'ngCookies'
   ])
-  .config(function ($routeProvider) {
-    $routeProvider
-      .when('/', {
-        templateUrl: 'views/main.html',
-        controller: 'MainCtrl'
-      })
-      .when('/about', {
-        templateUrl: 'views/about.html',
-        controller: 'AboutCtrl'
-      })
-      .otherwise({
-        redirectTo: '/'
-      });
+  .controller('GameController', function () {
+
   });
